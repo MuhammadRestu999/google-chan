@@ -9,7 +9,7 @@ function isURL(text) {
 }
 
 function nav(type) {
-  let bookmark = document.querySelectorAll("div#bookmarks > div");
+  let bookmark = document.querySelectorAll("div#bookmarks > div") || [];
   if(type === 1) {
     document.getElementById("mySidenav").style.width = "250px";
     bookmark.forEach(v => v.setAttribute("class", v.getAttribute("class") + " hidden"));
@@ -39,6 +39,7 @@ function change() {
 }
 
 function setImg(file) {
+  if(!document.getElementById("image")) return
   document.getElementById("image").setAttribute("src", "/image/" + file);
   localStorage["img"] = file;
 }
@@ -155,7 +156,7 @@ function load() {
   if(!localStorage["theme"]) localStorage["theme"] = "light";
   if(!localStorage["img"]) localStorage["img"] = "google.png";
   if(!localStorage["bookmark"]) localStorage["bookmark"] = JSON.stringify([`        <div class="flex flex-col justify-center items-center my-5 transition duration-150 hover:scale-110">\n          <a class="flex w-full bg-white !w-[64px] !h-[64px] justify-center items-center mb-1 rounded-full hover:bg-opacity-60 dark:bg-[#232323] bg-opacity-90" href="javascript:void(0)" title="Add" onclick="showPrompt('ab')">\n            <span class="object-cover flex justify-center items-center h-[32px] w-[32px] bg-[#faefff] rounded dark:bg-[#3B3B3B]">\n              <span class="material-icons align-middle">add</span>\n            </span>\n          </a>\n          <div class="text-center whitespace-nowrap cursor-help black-selene group relative">\n            <span class="truncate">Add Bookmark</span>\n          </div>\n        </div>`]);
-  document.querySelector("div#bookmarks").innerHTML = JSON.parse(localStorage["bookmark"]).join("\n");
+  if(document.querySelector("div#bookmarks")) document.querySelector("div#bookmarks").innerHTML = JSON.parse(localStorage["bookmark"]).join("\n");
 
   let isLight = localStorage["theme"] == "light";
 

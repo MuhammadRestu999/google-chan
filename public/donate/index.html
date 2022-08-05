@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Chrome Homepage</title>
+    <title>Chrome Homepage | /donate/</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <link rel="stylesheet" href="/css/main.css">
@@ -46,8 +46,9 @@
   <body onload="load();">
     <div id="mySidenav" class="sidenav overflow-y-auto">
       <a href="javascript:void(0);" class="closebtn" onclick="nav(0);">&times;</a>
-      <a href="javascript:void(0)">Home</a>
-      <a href="javascript:void(0)" onclick="location.assign('/donate/')">Donate</a>
+      <a href="javascript:void(0)" onclick="location.assign('/')">Home</a>
+      <a href="javascript:void(0)">Donate</a>
+      <!--
       <a href="javascript:void(0)" onclick="showPrompt('db')">Delete bookmark</a>
       <details>
         <summary>Select Character</summary>
@@ -72,6 +73,7 @@
         <a href="javascript:void(0);" onclick="setImg('merryweather_xbox-chan.gif');">XBOX</a>
         <a href="javascript:void(0);" onclick="setImg('misc_zone-tan.gif');">Zone Tan</a>
       </details>
+      -->
       <br><br><br><br><br><br><br><br><br><br>
       <div onclick="change();" class="cursor-pointer flex items-center h-[48px] bg-[#FAFAFA] dark:bg-[#343434] hover:bg-[#DADADA] dark:hover:bg-[#242424] rounded-full w-[60%] p-2 mx-4" data-v-552b64fa>
         <div id="themeIcon" class="m-2" data-v-552b64fa>
@@ -85,26 +87,14 @@
       <div class="border-b-2 border-gray-300 dark:border-gray-500" data-v-552b64fa></div>
     </div>
     <span style="font-size: 30px; cursor: pointer;" onclick="nav(1);"><i class="fa fa-bars" aria-hidden="true"></i></span>
-    <br>
+    <br><br><br><br>
     <div class="content">
-      <img id="image" class="w-full h-auto object-cover object-center" src="" align="center" width="500" height="300"><br>
-      <form action="https://www.google.com/search" method="GET" onsubmit="if(isURL(q.value)) { location.href = q.value; return false }">
-        <div class="flex justify-center w-full group">
-          <div class="rounded-l-full bg-white dark:bg-[#232323] border-l-2 border-t-2 border-b-2 border-opacity-0 dark:border-[#595959] dark:border-opacity-0 group-hover:border-opacity-100 flex justify-center items-center">
-            <div class="ml-2.5 p-2 flex justify-center items-end outline-none appearance-none block rounded-full bg-white dark:text-white dark:bg-[#434343] border-l-2 border-t-2 border-b-2 border-opacity-0 dark:border-[#595959] dark:border-opacity-0">
-              <img src="/image/search-google.svg" alt="Google" class="w-6 h-6 md:w-8 md:h-8 object-cover inline-block align-baseline" width="48" height="48">
-            </div>
-          </div>
-        <input type="text" name="q" id="q" class="text-base md:text-xl bg-white dark:bg-[#232323] text-opacity-60 py-4 pl-2 outline-none w-[600px] max-w-[60%] border-t-2 border-b-2 border-opacity-0 dark:border-[#595959] dark:border-opacity-0 dark:text-white group-hover:border-opacity-100" placeholder="Search Google or type a URL" autofocus required>
-        <div class="rounded-r-full bg-white dark:bg-[#232323] border-r-2 border-t-2 border-b-2 border-opacity-0 dark:border-[#595959] dark:border-opacity-0 group-hover:border-opacity-100">
-          <button type="submit" class="m-3 p-3 flex justify-center items-center outline-none">
-            <svg width="24" height="24" viewbox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M17.71 16.29L14.31 12.9C15.407 11.5025 16.0022 9.77666 16 8C16 6.41775 15.5308 4.87103 14.6518 3.55544C13.7727 2.23984 12.5233 1.21446 11.0615 0.608963C9.59966 0.00346243 7.99113 -0.154964 6.43928 0.153718C4.88743 0.462399 3.46197 1.22433 2.34315 2.34315C1.22433 3.46197 0.462403 4.88743 0.153721 6.43928C-0.15496 7.99113 0.00346625 9.59966 0.608967 11.0615C1.21447 12.5233 2.23985 13.7727 3.55544 14.6518C4.87103 15.5308 6.41775 16 8 16C9.77666 16.0022 11.5025 15.407 12.9 14.31L16.29 17.71C16.383 17.8037 16.4936 17.8781 16.6154 17.9289C16.7373 17.9797 16.868 18.0058 17 18.0058C17.132 18.0058 17.2627 17.9797 17.3846 17.9289C17.5064 17.8781 17.617 17.8037 17.71 17.71C17.8037 17.617 17.8781 17.5064 17.9289 17.3846C17.9797 17.2627 18.0058 17.132 18.0058 17C18.0058 16.868 17.9797 16.7373 17.9289 16.6154C17.8781 16.4936 17.8037 16.383 17.71 16.29ZM2 8C2 6.81331 2.3519 5.65327 3.01119 4.66658C3.67047 3.67988 4.60755 2.91085 5.7039 2.45672C6.80026 2.0026 8.00666 1.88378 9.17055 2.11529C10.3344 2.3468 11.4035 2.91824 12.2426 3.75736C13.0818 4.59647 13.6532 5.66557 13.8847 6.82946C14.1162 7.99334 13.9974 9.19974 13.5433 10.2961C13.0892 11.3925 12.3201 12.3295 11.3334 12.9888C10.3467 13.6481 9.18669 14 8 14C6.4087 14 4.88258 13.3679 3.75736 12.2426C2.63214 11.1174 2 9.5913 2 8Z" fill="currentColor">
-            </svg>
-          </button>
-        </div>
-      </div>
-      <div class="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 p-5 justify-center items-start max-w-[720px] m-auto mt-8 rounded-t-xl bg-gray-100 dark:bg-[#3B3B3B] bg-opacity-90 border-white border-opacity-40" id="bookmarks"></div>
+      <center>
+        <iframe src="https://saweria.co/overlays/leaderboard?streamKey=147b354a64b2f1ec32325857fa532552&noAmount=true&backgroundColor=%23faae2b&color=%23333&fontWeight=500&title=Leaderboard&mode=all"></iframe>
+        <a href="https://saweria.co/MuhammadRestu">
+          <iframe src="https://saweria.co/overlays/qr?streamKey=147b354a64b2f1ec32325857fa532552&backgroundColor=%23faae2b&barcodeColor=%23000&username=MuhammadRestu"></iframe>
+        </a>
+      </center>
     </div>
   </body>
 </html>

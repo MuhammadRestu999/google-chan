@@ -1697,7 +1697,7 @@ body {
     --tw-border-opacity: 1 !important;
     border-color: rgb(122 162 247 / var(--tw-border-opacity)) !important
 }
- 
+
 @media (min-width: 768px) {
     .md\:h-8 {
         height: 2rem !important
